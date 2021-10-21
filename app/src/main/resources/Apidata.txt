@@ -1,0 +1,4 @@
+datadataquotes1.ApiQuote@1e7c7811
+quotes1.ApiQuote@4923ab24
+ApiQuote{quoteAuthor='John Simone', quoteText='If you're in a bad situation, don't worry it'll change. If you're in a good situation, don't worry it'll change.'}
+ApiQuote{quoteAuthor='Alan Watts', quoteText='No valid plans for the future can be made by those who have no capacity for living now.'}
