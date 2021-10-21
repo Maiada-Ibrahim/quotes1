@@ -13,6 +13,8 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 public class App {
 
@@ -31,6 +33,32 @@ public class App {
         String url = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
         sendGetRequest(url);
     }
+    public static String randomLine() throws FileNotFoundException {
+//        Random rand = new Random();
+        String reseltq = "";
+        int number = (int) (Math.random() * 10);
+        Random random = new Random();
+
+        try {
+            File files = new File("app/src/main/resources/Apidata.txt");
+            int c = 0;
+            Scanner scanner = new Scanner(files);
+            while (scanner.hasNextLine()) {
+                String l = scanner.nextLine();
+                c++;
+
+//                int ran = random.nextInt(c);
+                if (c == number) {
+//                    System.out.println(l);
+                    reseltq = l;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("error, please insert the valid files");
+        }
+        return reseltq;
+
+    }
     static void sendGetRequest(String urlString){
         try {
             URL url = new URL(urlString);
@@ -45,7 +73,13 @@ public class App {
             System.out.println(e.getMessage());
             e.printStackTrace();
         } catch (IOException e) {
-            System.out.println("Sorry, there was a problem opening the connection from the URL object, the error was:");
+            try {
+                System.out.println(randomLine());
+            } catch (FileNotFoundException ex) {
+                ex.printStackTrace();
+            }
+
+//            System.out.println("Sorry, there was a problem opening the connection from the URL object, the error was:");
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
@@ -70,8 +104,8 @@ public class App {
     static void printBufferedReaderContect(BufferedReader in) throws IOException {
         Gson gson=new Gson();
         ApiQuote convertArray = gson.fromJson(in,ApiQuote.class);
-        System.out.println("Name of Author: "+convertArray.getQuoteAuthor());
-        System.out.println("The Quote : " + convertArray.getQuoteText());
+//        System.out.println("Name of Author: "+convertArray.getQuoteAuthor());
+//        System.out.println("The Quote : " + convertArray.getQuoteText());
         File file = new File("app/src/main/resources/Apidata.txt");
         FileWriter fr = new FileWriter(file, true);
         BufferedWriter br = new BufferedWriter(fr);
@@ -79,7 +113,6 @@ public class App {
 
         br.close();
         fr.close();
-
 
 
     }
