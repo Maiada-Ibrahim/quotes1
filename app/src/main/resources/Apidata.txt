@@ -2,3 +2,35 @@ datadataquotes1.ApiQuote@1e7c7811
 quotes1.ApiQuote@4923ab24
 ApiQuote{quoteAuthor='John Simone', quoteText='If you're in a bad situation, don't worry it'll change. If you're in a good situation, don't worry it'll change.'}
 ApiQuote{quoteAuthor='Alan Watts', quoteText='No valid plans for the future can be made by those who have no capacity for living now.'}
+ApiQuote{quoteAuthor='Catherine Pulsifer ', quoteText='Rather than wishing for change, you first must be prepared to change. '}
+ApiQuote{quoteAuthor='Lisa Alther', quoteText='Thats the risk you take if you change: that people you've been involved with won't like the new you. But other people who do will come along.'}
+ApiQuote{quoteAuthor='Ralph Waldo Emerson', quoteText='A hero is no braver than an ordinary man, but he is braver five minutes longer. '}
+ApiQuote{quoteAuthor='Denis Waitley', quoteText='A dream is your creative vision for your life in the future. You must break out of your current comfort zone and become comfortable with the unfamiliar and the unknown.  '}
+ApiQuote{quoteAuthor='Alfred Painter', quoteText='Saying thank you is more than good manners. It is good spirituality. '}
+ApiQuote{quoteAuthor=' Frank Crane', quoteText='You may be deceived if you trust too much, but you will live in torment unless you trust enough. '}
+ApiQuote{quoteAuthor='Oscar Wilde', quoteText='Be yourself; everyone else is already taken.'}
+ApiQuote{quoteAuthor='Robert Anthony ', quoteText='Forget about all the reasons why something may not work. You only need to find one good reason why it will. '}
+ApiQuote{quoteAuthor='Ralph Waldo Emerson', quoteText='Most of the shadows of life are caused by standing in our own sunshine.'}
+ApiQuote{quoteAuthor='John Dryden', quoteText='A thing well said will be wit in all languages. '}
+ApiQuote{quoteAuthor='Albert Einstein', quoteText='Anyone who doesn't take truth seriously in small matters cannot be trusted in large ones either.'}
+ApiQuote{quoteAuthor='Lao Tzu ', quoteText='Great indeed is the sublimity of the Creative, to which all beings owe their beginning and which permeates all heaven.  '}
+ApiQuote{quoteAuthor='Brian Tracy', quoteText='You cannot control what happens to you, but you can control your attitude toward what happens to you, and in that, you will be mastering change rather than allowing it to master you.  '}
+ApiQuote{quoteAuthor='Napoleon Hill ', quoteText='Hold a picture of yourself long and steadily enough in your minds eye, and you will be drawn toward it.  '}
+ApiQuote{quoteAuthor='Euripides', quoteText='The wisest men follow their own direction. '}
+ApiQuote{quoteAuthor='John Petit-Senn', quoteText='Not what we have but what we enjoy constitutes our abundance.'}
+ApiQuote{quoteAuthor='John Lubbock', quoteText='A day of worry is more exhausting than a day of work. '}
+ApiQuote{quoteAuthor='Lao Tzu ', quoteText='The journey of a thousand miles begins with one step.  '}
+ApiQuote{quoteAuthor='Thomas Edison', quoteText='Genius is one percent inspiration and ninety-nine percent perspiration. '}
+ApiQuote{quoteAuthor='Babe Ruth', quoteText='Yesterdays home runs don't win today's games.'}
+ApiQuote{quoteAuthor='Marquis Vauvenargues ', quoteText='Wicked people are always surprised to find ability in those that are good. '}
+ApiQuote{quoteAuthor='Napoleon Hill', quoteText='First comes thought; then organization of that thought, into ideas and plans; then transformation of those plans into reality. The beginning, as you will observe, is in your imagination. '}
+ApiQuote{quoteAuthor='George Eliot', quoteText='It is never too late to be what you might have been.'}
+ApiQuote{quoteAuthor='Moncure Conway', quoteText='The best thing in every noble dream is the dreamer... '}
+ApiQuote{quoteAuthor='Johann Wolfgang von Goethe', quoteText='Kindness is the golden chain by which society is bound together. '}
+ApiQuote{quoteAuthor='Voltaire', quoteText='To enjoy life, we must touch much of it lightly.'}
+ApiQuote{quoteAuthor='Vince Lombardi', quoteText='If you'll not settle for anything less than your best, you will be amazed at what you can accomplish in your lives.'}
+ApiQuote{quoteAuthor='Jean Lacordaire ', quoteText='Neither genius, fame, nor love show the greatness of the soul. Only kindness can do that. '}
+ApiQuote{quoteAuthor='Robert Collier', quoteText='In every adversity there lies the seed of an equivalent advantage. In every defeat is a lesson showing you how to win the victory next time. '}
+ApiQuote{quoteAuthor='Johann Wolfgang von Goethe', quoteText='Knowing is not enough; we must apply! '}
+ApiQuote{quoteAuthor='Lao Tzu ', quoteText='He who controls others may be powerful, but he who has mastered himself is mightier still.  '}
+ApiQuote{quoteAuthor='Tony Robbins ', quoteText='The only limit to your impact is your imagination and commitment.  '}
