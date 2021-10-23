@@ -148,8 +148,8 @@ public class App {
         List<Quotes> quotes =  gson.fromJson(reader , new TypeToken<List<Quotes>>(){}.getType());
         BufferedWriter bw = new BufferedWriter(new FileWriter("app/src/main/resources/data.json" , false));
         ApiQuote convertArray1 = gson.fromJson(in,ApiQuote.class);
-//        System.out.println("Name of Author: "+convertArray1.getQuoteAuthor());
-//        System.out.println("The Quote : " + convertArray1.getQuoteText());
+        System.out.println("Name of Author: "+convertArray1.getQuoteAuthor());
+        System.out.println("The Quote : " + convertArray1.getQuoteText());
         Quotes quote = new Quotes(convertArray1.getQuoteAuthor(),convertArray1.getQuoteText());
 //        System.out.println(quote);
         quotes.add(quote);
@@ -161,5 +161,5 @@ public class App {
         bw.write(newQuotes);
         bw.close();
         in.close();
-        System.out.println(getRandomQuotes("app/src/main/resources/data.json")) ;    }
-}
+//        System.out.println(getRandomQuotes("app/src/main/resources/data.json")) ;    }
+}}
