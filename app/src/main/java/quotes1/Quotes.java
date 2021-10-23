@@ -9,6 +9,8 @@ public class Quotes {
         this.text = text;
     }
 
+
+
     public String getAuthor() {
         return author;
     }
