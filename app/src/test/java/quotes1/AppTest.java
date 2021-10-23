@@ -3,7 +3,15 @@
  */
 package quotes1;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.junit.jupiter.api.Test;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -11,4 +19,24 @@ class AppTest {
         App apptest =new App();
 
     }
+//    @Test
+//    public void testConstructor() throws FileNotFoundException {
+//        Quotes quote;
+//        String path;
+//        Gson gson;
+//        BufferedReader reader;
+//        List<Quotes> quotes;
+//        path = "app/src/test/resources/data.json";
+//        gson = new Gson();
+//        reader = new BufferedReader(new FileReader(path));
+//        quote = new Quotes( "testAuthor"  , "testText");
+//
+//        quotes =  gson.fromJson(reader , new TypeToken<List<Quotes>>() {}.getType());
+//
+//
+//        assertEquals("testAuthor" , quote.getAuthor());
+//        assertEquals("testText" , quote.getText());
+//
+//    }
+
 }
