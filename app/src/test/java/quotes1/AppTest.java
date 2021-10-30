@@ -7,36 +7,52 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.junit.jupiter.api.Test;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static quotes1.App.*;
 
 class AppTest {
-    @Test void printBufferedReaderContect() {
-        App apptest =new App();
 
+    @Test
+    void sendGetRequest() throws IOException {
+        URL url = new URL("http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en");
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11");
+        if (connection.getResponseCode() == 200) {
+            InputStream inputStream = connection.getInputStream();
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);   // needs an input stream
+            BufferedReader in = new BufferedReader(inputStreamReader);    // I need to provide the reader with a stream reader            printBufferedReaderContect(in);
+            Gson gson = new Gson();
+            BufferedReader reader = new BufferedReader(new FileReader("src/test/resources/data.json"));
+            List<Quotes> quotes = gson.fromJson(reader, new TypeToken<List<Quotes>>() {
+            }.getType());
+            ApiQuote convertArray1 = gson.fromJson(in, ApiQuote.class);
+            Quotes quote = new Quotes(convertArray1.getQuoteAuthor(), convertArray1.getQuoteText());
+            quotes.add(quote);
+            assertEquals(convertArray1.getQuoteAuthor(), quote.getAuthor());
+            assertEquals(convertArray1.getQuoteText(), quote.getText());
+
+        }
     }
-//    @Test
-//    public void testConstructor() throws FileNotFoundException {
-//        Quotes quote;
-//        String path;
-//        Gson gson;
-//        BufferedReader reader;
-//        List<Quotes> quotes;
-//        path = "app/src/test/resources/data.json";
-//        gson = new Gson();
-//        reader = new BufferedReader(new FileReader(path));
-//        quote = new Quotes( "testAuthor"  , "testText");
-//
-//        quotes =  gson.fromJson(reader , new TypeToken<List<Quotes>>() {}.getType());
-//
-//
-//        assertEquals("testAuthor" , quote.getAuthor());
-//        assertEquals("testText" , quote.getText());
-//
-//    }
+        @Test void TestConnection () throws IOException {
+            String ApiUrl = " http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
+            URL url = new URL(ApiUrl);
+
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            assertEquals(200, connection.getResponseCode());
+        }
+        @Test void QuoteApiConstructor () {
+            ApiQuote quotes = new ApiQuote("JONE", "HELP");
+            String expected = "ApiQuote{quoteAuthor='JONE'," + " quoteText='HELP'}";
+            assertEquals(expected, quotes.toString());
+        }
+
 
 }
