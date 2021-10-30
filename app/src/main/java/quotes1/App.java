@@ -151,7 +151,7 @@ public class App {
         System.out.println("Name of Author: "+convertArray1.getQuoteAuthor());
         System.out.println("The Quote : " + convertArray1.getQuoteText());
         Quotes quote = new Quotes(convertArray1.getQuoteAuthor(),convertArray1.getQuoteText());
-//        System.out.println(quote);
+        System.out.println(quote);
         quotes.add(quote);
         gson = gson.newBuilder().setPrettyPrinting().create();
         String newQuotes = gson.toJson(quotes);
@@ -162,4 +162,20 @@ public class App {
         bw.close();
         in.close();
 //        System.out.println(getRandomQuotes("app/src/main/resources/data.json")) ;    }
-}}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
